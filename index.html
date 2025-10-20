@@ -284,7 +284,7 @@
         /* Hero Section */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(26, 58, 108, 0.85), rgba(29, 53, 87, 0.9)), url('https://images.unsplash.com/photo-1575421065452-1612804f7800?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            background: linear-gradient(rgba(26, 58, 108, 0.4), rgba(29, 53, 87, 0.5)), url('https://images.unsplash.com/photo-1575421065452-1612804f7800?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
             display: flex;
             align-items: center;
             color: white;
@@ -293,11 +293,31 @@
             overflow: hidden;
         }
 
+        .hero-logo-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            opacity: 0.25;
+        }
+
+        .hero-logo {
+            max-width: 80%;
+            max-height: 80%;
+            object-fit: contain;
+        }
+
         .hero-content {
             max-width: 800px;
             margin: 0 auto;
             padding: 0 var(--spacing-sm);
             z-index: 2;
+            position: relative;
         }
 
         .hero h1 {
@@ -1067,6 +1087,9 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
+        <div class="hero-logo-background">
+            <img src="logo.png" alt="Trezit Consultancy Logo" class="hero-logo">
+        </div>
         <div class="hero-content">
             <h1>Welcome to Trezit Consultancy</h1>
             <p>Trezit Consultancy and General Dealers delivers expert consultancy services and diversified trading solutions to empower businesses across Zambia and Southern Africa.</p>
